@@ -1,0 +1,90 @@
+
+html {
+	font-size: 16px;
+	margin: 0;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+/*header*/
+
+.header-desktop {
+	display: flex;
+	position: fixed;
+	height: 4rem;
+	width: 100%;
+	z-index: 5;
+	background-color: white;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-mobile {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	width: 100%;
+	height: 4rem;
+	z-index: 5;
+	position: fixed;
+}
+
+.header-mobile .mobile {
+	display: none;
+	width: 25%;
+	z-index: 5;
+	text-align: center;
+}
+
+.logo {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-left: 5px;
+}
+
+.logo img {
+	height: 3rem;
+	width: auto;
+}
+
+.logo span {
+	font-size: 2rem;
+}
+
+#colmar {
+	font-weight: 800;
+}
+
+nav {
+	margin: 0 24px;
+}
+
+nav span {
+	margin-left: 1rem;
+}
+
+/*mobile view*/
+
+@media only screen and (max-width: 480px) {
+	
+	.header-desktop {
+		display: none;
+	}
+
+	.header-mobile {
+		display: flex;
+	}
+
+	#colmar #academy {
+		display: none;
+	}
+
+	.header-mobile .mobile {
+		display: block;
+	}
+}
