@@ -16,9 +16,14 @@ h1 {
 	padding-bottom: 10px;
 }
 
+h2 {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
 h3 {
 	font-size: 1.5rem;
-	font-weight: 500;
+	font-weight: 550;
 }
 /*header*/
 
@@ -31,6 +36,7 @@ h3 {
 	background-color: white;
 	align-items: center;
 	justify-content: space-between;
+	border-bottom: 1px solid lightgrey;
 }
 
 .header-mobile {
@@ -77,6 +83,13 @@ nav {
 
 nav span {
 	margin-left: 1rem;
+	border-radius: 5px;
+	padding: 0.5rem;
+}
+
+nav span:hover {
+	background-color: lightblue;
+	transition: background-color 600ms ease;
 }
 
 /*mobile view*/
@@ -108,7 +121,7 @@ section {
 	width: 100%;
 	max-height: auto;
 	justify-content: flex-start;
-	background-color: grey;
+	background-color: lightgrey;
 	padding-top: 64px;
 }
 
@@ -127,18 +140,23 @@ section {
 
 .btn {
 	display: block;
-	background-color: black;
+	background-color: grey;
 	max-width: 300px;
 	height: auto;
 	text-align: center;
 	color: white;
 	padding: 0.5rem;
 	margin: 2rem 0;
-	position: relative;
+	border-radius: 5px;
 }
 
 .btn a {
 	padding: 0.5rem auto;
+}
+
+.btn:hover {
+	background-color: darkblue;
+	transition: background-color 600ms ease;
 }
 
 /*mobile*/
@@ -193,8 +211,9 @@ article {
 
 .information-main span {
 	display: block;
-	margin: 0 auto;
+	margin: 1.5rem 2rem;
 	padding-top: 2rem;
+	line-height: 1.5rem;
 }
 
 .information-main img {
@@ -204,25 +223,26 @@ article {
 	display: block;
 	padding: 2rem 1.5rem;
 }
-/*
+
 #quote {
-	font-weight: 400;
-}*/
+	font-weight: 525;
+}
 
 .side {
 	display: flex;
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	align-items: center;
-	width: 40%;
+	min-width: 400px;
 	height: auto;
 }
 
 .info-side .img-mobile {
 	display: none;
-	width: 95%;
+	max-width: 95%;
 	height: auto;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .info-side p {
@@ -258,13 +278,19 @@ article {
 	margin: auto 0;
 }
 
+.info-side:hover {
+	background-color: lightgrey;
+	transition: background-color 600ms ease;
+}
+
 @media only screen and (max-width: 480px) {
 	.side {
 		flex-direction: column;
 		padding: 1rem 0;
+		max-width: 100%;
 	}
 	.info-text {
-		width: 100%;
+		max-width: 100%;
 		height: auto;
 		margin: 1rem;
 	}
@@ -281,6 +307,14 @@ article {
 		display: block;
 		overflow: hidden;
 		margin: auto 0;
+		min-width: 95%;
+	}
+	.info-side h3 {
+		margin-top: 0;
+		margin-bottom: 0.25;
+	}
+	.info-side p {
+		margin: 0.5rem;
 	}
 }
 
@@ -291,6 +325,7 @@ article {
 	justify-content: center;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	background-color: lightgrey;
 }
 
 .course-title {
@@ -315,6 +350,12 @@ article {
 	height: auto;
 	margin: 1rem;
 	overflow: hidden;
+	background-color: white;
+}
+
+.course-container:hover {
+	background-color: lightgrey;
+	transition: background-color 600ms ease;
 }
 
 .course-text {
@@ -346,10 +387,14 @@ article {
 		display: block;
 		width: 95%;
 		margin: 0.25rem 1rem;
+		text-align: center;
+		border-bottom: 1px solid grey;
+		background-color: lightgrey;
 	}
 	.course-text {
 		min-height: auto;
 	}
+
 }
 
 /*thesis*/
@@ -369,6 +414,7 @@ article {
 	height: auto;
 	margin: auto 0;
 	text-align: center;
+	padding: 1rem;
 }
 
 .video {
@@ -376,17 +422,20 @@ article {
 	width: 55%;
 	overflow: hidden;
 	padding: 0 0.5rem 1.5rem 1.5rem;
+	border-right: 1px solid lightgrey;
 }
 
 .video span {
 	display: block;
 	margin: 0 auto;
 	padding-top: 2rem;
+	line-height: 1.5rem;
 }
 
 .thesis-side {
 	width: 35%;
 	height: auto;
+	margin-left: 1rem;
 }
 
 .thesis-cards {
@@ -395,6 +444,11 @@ article {
 	align-items: flex-start;
 	width: 100%;
 	height: auto;
+}
+
+.thesis-cards:hover {
+	background-color: lightgrey;
+	transition: background-color 600ms ease;
 }
 
 .thesis-cards img {
@@ -408,8 +462,9 @@ article {
 	display: inline-block;
 	width: 50%;
 	height: 100%;
-	margin: auto 0;
-	padding: 0 1.5rem;
+	margin: 2rem 1rem;
+	padding: auto 1.5rem;
+	line-height: 1.5rem;
 }
 
 .thesis-text p {
@@ -441,6 +496,7 @@ footer {
 	justify-content: space-between;
 	align-items: flex-start;
 	padding: 1rem 1.5rem 2rem 1.5rem;
+	border-top: 1px solid lightgrey;
 }
 
 footer .links {
