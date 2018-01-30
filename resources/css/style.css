@@ -3,6 +3,7 @@ html {
 	font-size: 16px;
 	margin: 0;
 	height: 100%;
+	font-family: "roboto", sans-serif;
 }
 
 a {
@@ -14,16 +15,19 @@ h1 {
 	font-size: 2.5rem;
 	font-weight: 700;
 	padding-bottom: 10px;
+	font-family: "oswald", sans-serif;
 }
 
 h2 {
 	font-size: 2rem;
 	font-weight: 600;
+	font-family: "oswald", sans-serif;
 }
 
 h3 {
 	font-size: 1.5rem;
 	font-weight: 550;
+	font-family: "oswald", sans-serif;
 }
 /*header*/
 
@@ -87,9 +91,13 @@ nav span {
 	padding: 0.5rem;
 }
 
-nav span:hover {
-	background-color: lightblue;
+/*hover animation only on desktop*/
+
+@media only screen and (min-width: 500px) {
+	nav span:hover {
+	background-color: #5585d1;
 	transition: background-color 600ms ease;
+	}
 }
 
 /*mobile view*/
@@ -154,9 +162,13 @@ section {
 	padding: 0.5rem auto;
 }
 
-.btn:hover {
-	background-color: darkblue;
+/*hover animation only on desktop*/
+
+@media only screen and (min-width: 500px) {
+	.btn:hover {
+	background-color: #5585d1;
 	transition: background-color 600ms ease;
+	}
 }
 
 /*mobile*/
@@ -212,8 +224,7 @@ article {
 .information-main span {
 	display: block;
 	margin: 1.5rem 2rem;
-	padding-top: 2rem;
-	line-height: 1.5rem;
+	line-height: 2rem;
 }
 
 .information-main img {
@@ -225,7 +236,7 @@ article {
 }
 
 #quote {
-	font-weight: 525;
+	font-weight: 600;
 }
 
 .side {
@@ -278,10 +289,20 @@ article {
 	margin: auto 0;
 }
 
+.info-text span {
+	color: blue;
+}
+
+/*hover animation only on desktop*/
+
+@media only screen and (min-width: 500px) {
 .info-side:hover {
 	background-color: lightgrey;
 	transition: background-color 600ms ease;
 }
+}
+
+/*mobile view*/
 
 @media only screen and (max-width: 480px) {
 	.side {
@@ -353,11 +374,6 @@ article {
 	background-color: white;
 }
 
-.course-container:hover {
-	background-color: lightgrey;
-	transition: background-color 600ms ease;
-}
-
 .course-text {
 	display: inline-block;
 	min-height: 150px;
@@ -372,10 +388,22 @@ article {
 	margin: 0.5rem 0;
 }
 
+/*hover animation only on desktop*/
+
+@media only screen and (min-width: 500px) {
+	.course-container:hover {
+	background-color: #5585d1;
+	transition: background-color 600ms ease;
+	}
+}
+
+/*mobile view*/
+
 @media only screen and (max-width: 480px) {
 	.courses {
 		padding-bottom: 2rem;
 		border-bottom: 1px solid grey;
+		background-color: white;
 	}
 	.course-cards {
 		flex-direction: column;
@@ -446,11 +474,6 @@ article {
 	height: auto;
 }
 
-.thesis-cards:hover {
-	background-color: lightgrey;
-	transition: background-color 600ms ease;
-}
-
 .thesis-cards img {
 	display: inline-block;
 	width: 35%;
@@ -473,6 +496,17 @@ article {
 	margin: 0 auto;
 } 
 
+/*hover animation only on desktop*/
+
+@media only screen and (min-width: 500px) {
+	.thesis-cards:hover {
+	background-color: lightgrey;
+	transition: background-color 600ms ease;
+	}
+}
+
+/*mobile view*/
+
 @media only screen and (max-width: 480px) {
 	.video span {
 		display: none;
@@ -491,6 +525,7 @@ article {
 }
 
 /*footer*/
+
 footer {
 	display: flex;
 	justify-content: space-between;
@@ -500,8 +535,14 @@ footer {
 }
 
 footer .links {
-	padding: 0 0.5rem;
+	padding: 0 1rem;
 }
+
+.links a {
+	margin: 0 1rem;
+}
+
+/*mobile view*/
 
 @media only screen and (max-width: 480px) {
 	footer {
